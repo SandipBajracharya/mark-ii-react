@@ -6,7 +6,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react-refresh', '@typescript-eslint/eslint-plugin'],
+  plugins: ['@typescript-eslint/eslint-plugin'],
   root: true,
   env: { browser: true },
   extends: [
