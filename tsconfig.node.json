@@ -1,0 +1,10 @@
+// extended form of tsconfig.json file specifically for node
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "allowSyntheticDefaultImports": true,
+    "types": ["node"]
+  },
+  "include": ["vite.config.ts"]
+}
