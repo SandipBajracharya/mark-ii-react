@@ -17,16 +17,26 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
+    "strictNullChecks": false,
 
     "baseUrl": "./src",
     "paths": {
+      "@api/*": ["./api/*"],
       "@components/*": ["./components/*"],
       "@pages/*": ["./pages/*"],
       "@routes/*": ["./routes/*"],
       "@layouts/*": ["./layouts/*"],
       "@helpers/*": ["./helpers/*"],
-      "@hocs/*": ["./hocs/*"]
+      "@hocs/*": ["./hocs/*"],
+      "@hooks/*": ["./hooks/*"],
+      "@services/*": ["./services/*"],
+      "@customTypes/*": ["./types/*"], // cannot use name @types as it indicates types from node_modules
+      "@logics/*": ["./logics/*"],
+      "@utils/*": ["./utils/*"],
+      "@context/*": ["./context/*"],
+      "@*": ["./*"]
     }
+    // "typeRoots": ["./node_modules/@types", "./src/types"]
   },
   "exclude": ["node_modules"]
 }

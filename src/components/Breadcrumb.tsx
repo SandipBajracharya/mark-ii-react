@@ -21,7 +21,7 @@ const Breadcrumb = ({ path = [] }: BreadcrumbProps) => {
     <React.Fragment>
       <div className="flex gap-2.5 font-medium">
         <span>
-          <Link to="/" className="hover:text-darkGray">
+          <Link to="/dashboard" className="hover:text-darkGray">
             Dashboard
           </Link>{' '}
           /
