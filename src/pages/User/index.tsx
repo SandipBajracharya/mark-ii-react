@@ -2,7 +2,7 @@ import Breadcrumb from '@components/Breadcrumb';
 import Loading from '@components/Loading';
 import SimpleDialog from '@components/SimpleDialog';
 import Table from '@components/Table';
-import { TableActionType, TableHeaderType } from '@customTypes/user';
+import { TableActionType } from '@customTypes/user';
 import withAuth from '@hocs/withAuth';
 import withDashboardLayout from '@hocs/withDashboardLayout';
 import UserLogic from '@logics/User/user.logic';
@@ -13,17 +13,10 @@ import { toast } from 'react-toastify';
 
 // type vs interface 1. type can use complex enum type like isLoading: 'active' | 'inactive'
 
-const headers: Array<TableHeaderType> = [
-  { label: 'Name' },
-  { label: 'Email' },
-  { label: 'Contact Number' },
-  { label: 'Status' },
-];
-
 const User: React.FC = () => {
   const breadcrumbPath = [{ name: 'Users', link: '#' }];
 
-  const { getUserList, deleteUser } = UserLogic();
+  const { getUserList, deleteUser, tableHeaders } = UserLogic();
   const navigate = useNavigate();
   const [openDialog, setOpenDialog] = useState<boolean>(false);
   const [idContainer, setIdContainer] = useState<number | null>(null);
@@ -95,7 +88,7 @@ const User: React.FC = () => {
       <div className="rounded-sm border border-stroke bg-white px-5 py-5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:pb-5 mt-4">
         <div className="max-w-full overflow-x-auto">
           {!isLoading ? (
-            <Table headers={headers} records={data || null} actions={actions} />
+            <Table headers={tableHeaders} records={data || null} actions={actions} />
           ) : (
             <Loading />
           )}
@@ -105,7 +98,7 @@ const User: React.FC = () => {
         <SimpleDialog
           isOpen={openDialog}
           title="Confirm delete"
-          description="Are you sure to delete this user? Once delete, it will be deleted permanently."
+          description="Are you sure to delete this user? Once deleted, It will not be recoverable."
           affirmativeAction={() => deleteAction(idContainer)}
           negativeAction={() => {
             setOpenDialog(false);

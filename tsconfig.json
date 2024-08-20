@@ -3,6 +3,7 @@
     "target": "ESNext",
     "module": "ESNext",
     "skipLibCheck": true,
+    "esModuleInterop": true, // required for jest
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -34,9 +35,11 @@
       "@logics/*": ["./logics/*"],
       "@utils/*": ["./utils/*"],
       "@context/*": ["./context/*"],
+      "@stories/*": ["./stories/*"],
       "@*": ["./*"]
     }
     // "typeRoots": ["./node_modules/@types", "./src/types"]
   },
+  // "include": ["./jest.setup.ts"],
   "exclude": ["node_modules"]
 }

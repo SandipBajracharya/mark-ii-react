@@ -96,7 +96,7 @@ const Register: React.FC = () => {
                 )}
               </div>
               <div className="flex items-center justify-between">
-                <Button type="submit" classes="bg-primary text-sm" label="Register" />
+                <Button isPrimary type="submit" size="sm" label="Register" />
               </div>
             </form>
             <div className="mt-5 text-md">

@@ -132,7 +132,7 @@ const Login: React.FC = () => {
                 </div>
               </div>
               <div className="flex items-center justify-between">
-                <Button type="submit" classes="bg-primary text-sm" label="Login" />
+                <Button isPrimary type="submit" size="sm" label="Login" />
               </div>
             </form>
             <div className="mt-5 text-sm">

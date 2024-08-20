@@ -14,9 +14,9 @@ const UserEdit: React.FC = () => {
   ];
   const params = useParams();
   const userId = parseInt(params.id); //TODO: get userId from url
-  const { getSingleUser } = UserLogic();
+  const { getSingleUser, updateUser } = UserLogic();
 
-  const { data, status } = useQuery({
+  const { data, isLoading } = useQuery({
     queryKey: ['getOneUser'],
     queryFn: () => getSingleUser(userId),
   });
@@ -30,9 +30,14 @@ const UserEdit: React.FC = () => {
         <Breadcrumb path={breadcrumbPath} />
       </div>
       <div className="mt-4">
-        {status === 'success' ? (
+        {!isLoading ? (
           <>
-            <UserForm isEdit={true} id={userId} defaultValues={data.data} />
+            <UserForm
+              isEdit={true}
+              id={userId}
+              defaultValues={data.data}
+              onClickAction={updateUser}
+            />
           </>
         ) : (
           <Loading />

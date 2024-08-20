@@ -54,12 +54,15 @@ const SimpleDialog: React.FC<DialogType> = ({
             </div>
             <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
               <Button
-                classes="bg-primary text-sm"
+                isPrimary
+                size="sm"
                 label={affirmativeText}
                 onClickAction={affirmativeAction}
               />
               <Button
-                classes="bg-danger text-sm mr-2"
+                isPrimary={false}
+                size="sm"
+                classes="bg-danger mr-2"
                 label={negativeText}
                 onClickAction={negativeAction}
               />

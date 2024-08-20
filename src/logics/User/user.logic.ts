@@ -1,4 +1,4 @@
-import { CreateUserPayload, UpdateUserPayload } from '@customTypes/user';
+import { CreateUserPayload, TableHeaderType, UpdateUserPayload } from '@customTypes/user';
 import { formatUserList } from '@helpers/user.helper';
 import {
   createUserService,
@@ -10,6 +10,13 @@ import {
 import axios from 'axios';
 
 const UserLogic = () => {
+  const tableHeaders: Array<TableHeaderType> = [
+    { label: 'Name' },
+    { label: 'Email' },
+    { label: 'Contact Number' },
+    { label: 'Status' },
+  ];
+
   const createUser = async (payload: CreateUserPayload) => {
     try {
       const data = await createUserService(payload);
@@ -96,7 +103,7 @@ const UserLogic = () => {
     }
   };
 
-  return { createUser, updateUser, getSingleUser, getUserList, deleteUser };
+  return { createUser, updateUser, getSingleUser, getUserList, deleteUser, tableHeaders };
 };
 
 export default UserLogic;

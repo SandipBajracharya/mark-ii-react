@@ -26,7 +26,7 @@ export interface CreateUserPayload {
   last_name: string;
   phone?: number;
   email: string;
-  password: string;
+  password?: string;
 }
 
 export interface UpdateUserPayload {
@@ -35,6 +35,7 @@ export interface UpdateUserPayload {
   last_name: string;
   phone?: number;
   email: string;
+  password?: string;
 }
 
 export interface TableHeaderType {

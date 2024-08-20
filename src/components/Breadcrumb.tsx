@@ -35,6 +35,7 @@ const Breadcrumb = ({ path = [] }: BreadcrumbProps) => {
                   : 'hover:text-darkGray'
               }
               to={item.link}
+              data-testid={`${item.name}-breadcrumb`}
             >
               {item.name}
             </Link>

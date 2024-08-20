@@ -12,12 +12,7 @@ const Home: React.FC = () => {
           Welcome Home!
         </h1>
         <div className="mt-5">
-          <Button
-            type="button"
-            label="Logout"
-            classes="bg-primary text-sm"
-            onClickAction={logout}
-          />
+          <Button isPrimary type="button" label="Logout" size="sm" onClickAction={logout} />
         </div>
         {/* <div className="mt-5">
           <h3 className="text-lg">Some useful links:</h3>

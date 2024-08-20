@@ -17,6 +17,7 @@ const Icon: React.FC<IconType> = ({ icon }) => {
             stroke="currentColor"
             className="size-5"
           >
+            <title>Show</title>
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -42,6 +43,7 @@ const Icon: React.FC<IconType> = ({ icon }) => {
             stroke="currentColor"
             className="size-5"
           >
+            <title>Delete</title>
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -62,6 +64,7 @@ const Icon: React.FC<IconType> = ({ icon }) => {
             stroke="currentColor"
             className="size-5"
           >
+            <title>Edit</title>
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -82,6 +85,7 @@ const Icon: React.FC<IconType> = ({ icon }) => {
             stroke="currentColor"
             className="size-5"
           >
+            <title>Home</title>
             <path
               strokeLinecap="round"
               strokeLinejoin="round"

@@ -1,10 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx}',
+    './src/stories/**/*.stories.{js,ts,jsx,tsx}',
+  ],
   theme: {
     extend: {
       colors: {
-        primary: 'rgb(58 130 193)',
+        primary: '#4793AF',
+        secondary: '#FFC470',
         success: 'rgb(44 217 145)',
         warning: 'rgb(191 165 42)',
         danger: 'rgb(205 36 36)',

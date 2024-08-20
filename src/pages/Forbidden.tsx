@@ -11,7 +11,7 @@ const Forbidden: React.FC = () => {
         </div>
         <div className="mt-5">
           <Link to={'/'}>
-            <Button type="button" classes="bg-primary text-sm" title="Home">
+            <Button isPrimary type="button" size="sm" title="Home">
               <Icon icon="homeIcon" />
             </Button>
           </Link>
