@@ -17,7 +17,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:storybook/recommended',
   ],
-  ignorePatterns: ['dist', '.eslintrc.cjs'],
+  ignorePatterns: ['dist', '.eslintrc.cjs', '!.storybook'],
   settings: { react: { version: '18.2' } },
   rules: {
     'react/jsx-no-target-blank': 'off',
