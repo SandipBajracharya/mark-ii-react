@@ -14,6 +14,10 @@
 
 - yarn storybook
 
+## Backend
+
+- Uses api from Mark-i https://github.com/SandipBajracharya/Mark-i
+
 ### Note for self
 - uses High Order component for Dashboard layout and route layout for general Guest layout
 - uses High Order Component for admin auth check and for general there is logic in parent component in route layout for normal user
