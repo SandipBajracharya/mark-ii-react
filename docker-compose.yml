@@ -1,0 +1,15 @@
+# this file is useful if project is in monorepo architecture
+# and you want to run the project in docker container
+
+version: '3.9'
+
+services:
+  mark-ii-react:
+    image: sandeepbajracharya/mark-ii-react
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3000:3000

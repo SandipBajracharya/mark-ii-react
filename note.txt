@@ -1,0 +1,2 @@
+To fix:
+- "'React' refers to a UMD global, but the current file is a module". While importing React, Proptype for component is disabled automatically.
